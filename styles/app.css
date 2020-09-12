@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Flex Styles */
+.f{
+  display: flex;
+}
+
+.v{
+  align-items: center;
+}
+
+.h{
+  justify-content: center;
+}
+
+.r{
+  flex-direction: row;
+}
+
+.c{
+  flex-direction: column;
+}
+
+.sa{
+  justify-content: space-around;
+}
+
+.sb{
+  justify-content: space-between;
+}
+
+.p{
+  padding: 10px;
+}
+
