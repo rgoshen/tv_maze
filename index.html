@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-  <!-- Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	<!-- CSS -->
+
+    <!-- CSS -->
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -13,8 +13,8 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-	
-	<!-- My CSS -->
+
+    <!-- My CSS -->
     <link rel="stylesheet" href="/styles/app.css" />
 
     <!-- My Icon -->
@@ -35,22 +35,20 @@
   </head>
   <body>
     <div class="container">
+      <h1>TV Maze</h1>
 
-    <h1>TV Maze</h1>
+      <form class="form-inline" id="search-form">
+        <input class="form-control" id="search-query" value="" />
+        <button class="btn btn-primary" type="submit">Go!</button>
+      </form>
 
-    <form class="form-inline" id="search-form">
-      <input class="form-control" id="search-query" value="bletchley">
-      <button class="btn btn-primary" type="submit">Go!</button>
-    </form>
+      <div class="row mt-3" id="shows-list"></div>
 
-    <div class="row mt-3" id="shows-list">
+      <section style="display: none" id="episodes-area">
+        <h2>Episodes</h2>
+        <ul id="episodes-list"></ul>
+      </section>
     </div>
-
-    <section style="display: none" id="episodes-area">
-      <h2>Episodes</h2> 
-      <ul id="episodes-list">
-      </ul>
-    </section>  
 
     <<!-- Optional Javascript -->
     <!-- Axios -->
@@ -71,9 +69,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-    <script src="tvmaze.js"></script>
-
-    </div>
-
+    <script src="/scripts/tvmaze.js"></script>
   </body>
 </html>
