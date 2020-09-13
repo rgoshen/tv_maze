@@ -57,6 +57,8 @@ async function getEpisodes(id) {
 function populateShows(shows) {
   const $showsList = $("#shows-list");
 
+  $showsList.empty();
+
   for (let show of shows) {
     let $item = $(
       `<div class="col-md-6 col-lg-3 mb-2" data-show-id="${show.id}">
@@ -84,6 +86,8 @@ function populateShows(shows) {
 
 function populateEpisodes(episodes, showTitle) {
   const $episodesList = $("#episodes-list");
+
+  $episodesList.empty();
 
   for (let episode of episodes) {
     let $item = $(
