@@ -10,5 +10,5 @@ html {
 
 .card-body {
   overflow: auto;
-  max-height: 200px;
+  max-height: 12.5rem;
 }
