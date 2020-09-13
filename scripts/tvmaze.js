@@ -26,7 +26,7 @@ async function searchShows(query) {
       id: show.id,
       name: show.name,
       summary: show.summary,
-      poster: show.image ? show.image.medium : "../imgs/missing.png",
+      poster: show.image ? show.image.medium : "./imgs/missing.png",
     };
   });
 
