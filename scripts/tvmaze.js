@@ -115,7 +115,7 @@ $("#search-form").on("submit", async function handleSearch(evt) {
   let query = $("#search-query").val();
   if (!query) return;
 
-  // $("#episodes-area").hide();
+  $("#episodes-area").hide();
 
   let shows = await searchShows(query);
 
