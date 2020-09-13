@@ -17,7 +17,7 @@
       }
  */
 async function searchShows(query) {
-  const apiUrl = "http://api.tvmaze.com/search/shows";
+  const apiUrl = "https://api.tvmaze.com/search/shows";
 
   const res = await axios.get(apiUrl, { params: { q: query } });
   let shows = res.data.map((result) => {
@@ -38,7 +38,7 @@ async function searchShows(query) {
  */
 
 async function getEpisodes(id) {
-  const apiUrl = `http://api.tvmaze.com/shows/${id}/episodes`;
+  const apiUrl = `https://api.tvmaze.com/shows/${id}/episodes`;
   const res = await axios.get(apiUrl);
   let episodes = res.data.map((episode) => ({
     id: episode.id,
