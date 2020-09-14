@@ -25,6 +25,9 @@ async function searchShows(query) {
     return {
       id: show.id,
       name: show.name,
+      genres: show.genres,
+      status: show.status,
+      runtime: show.runtime,
       summary: show.summary,
       poster: show.image ? show.image.medium : "./imgs/missing.png",
     };
@@ -60,12 +63,21 @@ function populateShows(shows) {
   $showsList.empty();
 
   for (let show of shows) {
+    let showSummary;
+    if (show.summary) {
+      showSummary = show.summary;
+    } else {
+      showSummary = "No summary provided";
+    }
+
     let $item = $(
       `<div class="col-md-6 col-lg-3 mb-2" data-show-id="${show.id}">
          <div class="card" data-show-id="${show.id}">
          <img src="${show.poster}" class="card-img-top image-fluid" alt="${show.name}">
            <div class="card-body ">
              <h5 class="card-title">${show.name}</h5>
+             <p>${show.genres}</p>
+             <p>Runtime: ${show.runtime} mins Status: ${show.status}</p>
              <p class="card-text">${show.summary}</p>             
            </div>
            <div class="card-footer">

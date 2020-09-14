@@ -1,6 +1,6 @@
 @font-face {
   font-family: tvFontNormal;
-  src: url('./fonts/EuroStyleNormal.ttf');
+  src: url('../fonts/EuroStyleNormal.ttf');
   font-weight: normal;
 }
 
@@ -32,14 +32,14 @@ header {
 }
 
 .container {
-  background-color: rgba(82, 83, 85,0.9);
+  background-color: rgba(82, 83, 85, 0.9);
   border-radius: 5px;
 
 }
 
 .card-body {
   overflow: auto;
-  max-height: 12.5rem;
+  max-height: 14rem;
 }
 
 ul {
