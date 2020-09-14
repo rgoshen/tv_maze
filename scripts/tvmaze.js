@@ -88,17 +88,20 @@ function populateEpisodes(episodes, showTitle) {
   const $episodesList = $("#episodes-list");
 
   $episodesList.empty();
-
-  for (let episode of episodes) {
-    let $item = $(
-      `
+  if (episodes.length > 0) {
+    for (let episode of episodes) {
+      let $item = $(
+        `
         <li>
           ${episode.name}
           (season ${episode.season}, episode ${episode.number})
         </li>
       `
-    );
-    $episodesList.append($item);
+      );
+      $episodesList.append($item);
+    }
+  } else {
+    $episodesList.html("<li>No episodes available</li>");
   }
   $episodesList.prepend(`<h2>${showTitle}</h2>`);
   $("#episodes-area").show();
