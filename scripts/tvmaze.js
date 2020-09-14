@@ -69,7 +69,7 @@ function populateShows(shows) {
              <p class="card-text">${show.summary}</p>             
            </div>
            <div class="card-footer">
-            <button type="button" id="episodes" class="btn btn-primary btn-block" data-toggle="modal" data-target="#episodes-area">Episodes</button>
+            <button type="button" id="episodes" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#episodes-area">Episodes</button>
            </div>
          </div>
        </div>
