@@ -92,7 +92,7 @@ function populateEpisodes(episodes, showTitle) {
     for (let episode of episodes) {
       let $item = $(
         `
-        <li>
+        <li class="user-select-all">
           ${episode.name}
           (season ${episode.season}, episode ${episode.number})
         </li>
