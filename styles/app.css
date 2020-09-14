@@ -12,3 +12,7 @@ html {
   overflow: auto;
   max-height: 12.5rem;
 }
+
+ul {
+  list-style-type: none;
+}

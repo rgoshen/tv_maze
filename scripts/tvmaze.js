@@ -64,12 +64,12 @@ function populateShows(shows) {
       `<div class="col-md-6 col-lg-3 mb-2" data-show-id="${show.id}">
          <div class="card" data-show-id="${show.id}">
          <img src="${show.poster}" class="card-img-top image-fluid" alt="${show.name}">
-           <div class="card-body">
+           <div class="card-body ">
              <h5 class="card-title">${show.name}</h5>
              <p class="card-text">${show.summary}</p>             
            </div>
            <div class="card-footer">
-            <button type="button" id="episodes" class="btn btn-primary btn-block" data-toggle="modal">Episodes</button>
+            <button type="button" id="episodes" class="btn btn-primary btn-block" data-toggle="modal" data-target="#episodes-area">Episodes</button>
            </div>
          </div>
        </div>
@@ -103,7 +103,8 @@ function populateEpisodes(episodes, showTitle) {
   } else {
     $episodesList.html("<li>No episodes available</li>");
   }
-  $episodesList.prepend(`<h2>${showTitle}</h2>`);
+  // $episodesList.prepend(`<h2>${showTitle}</h2>`);
+  $("#episodes-label").text(`${showTitle}`);
   $("#episodes-area").show();
 }
 
